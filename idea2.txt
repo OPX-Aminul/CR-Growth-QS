@@ -1,0 +1,1530 @@
+MASTER DEVELOPMENT PROMPT — CR Growth QS
+
+Premium AI-Powered Hair Growth, Scalp Care & Personal Progress Tracking Mobile Application
+
+তুমি একজন Senior Mobile App Architect, Principal Flutter Engineer, AI Integration Engineer, UI/UX Designer, Database Engineer এবং QA Specialist হিসেবে কাজ করবে। তোমার কাজ হলো একটি সম্পূর্ণ আধুনিক, প্রফেশনাল, দ্রুতগতির, সুন্দর, নিরাপদ এবং বাস্তবে ব্যবহারযোগ্য Android মোবাইল অ্যাপ্লিকেশন তৈরি করা।
+
+প্রজেক্টের নাম হবে CR Growth QS। নামটি একটি প্রাথমিক ব্র্যান্ড নাম; প্রয়োজন হলে আরও প্রফেশনাল বিকল্প নাম প্রস্তাব করতে পারো।
+
+অ্যাপটি শুধু একটি সাধারণ হেয়ার গ্রোথ রুটিন ট্র্যাকার হবে না। এটি হবে একটি পূর্ণাঙ্গ AI-powered Personal Hair Care, Habit Tracking, Scalp Care & Lifestyle Improvement Platform।
+
+অ্যাপের প্রতিটি স্ক্রিন, প্রতিটি বাটন, প্রতিটি সেটিংস, প্রতিটি ড্যাশবোর্ড এবং প্রতিটি ফিচার বাস্তবে কাজ করতে হবে। শুধু সুন্দর UI তৈরি করে অসম্পূর্ণ ডেমো দিয়ে কাজ শেষ করবে না।
+
+---
+
+1. Project Vision & Development Philosophy
+
+অ্যাপটিকে এমনভাবে তৈরি করবে যেন এটি একটি প্রতিষ্ঠিত সফটওয়্যার কোম্পানির তৈরি প্রিমিয়াম অ্যাপ।
+
+ডিজাইনের ক্ষেত্রে ২০২৬ সালের আধুনিক মোবাইল অ্যাপ ডিজাইন, ব্যবহারকারীর অভিজ্ঞতা, পারফরম্যান্স, Accessibility, Responsive Layout, Privacy এবং Offline-first Architecture নিয়ে গবেষণা করবে।
+
+প্রয়োজনীয় অফিসিয়াল রেফারেন্স:
+
+- Android compatibility ও target SDK: https://developer.android.com/
+- Android 16 migration: https://developer.android.com/about/versions/16
+- Google AI Studio ও Gemini API: https://ai.google.dev/gemini-api/docs
+- Material Design: https://m3.material.io/
+- Flutter documentation: https://docs.flutter.dev/
+
+বর্তমান অফিসিয়াল ডকুমেন্টেশন অনুযায়ী প্রযুক্তিগত সিদ্ধান্ত নেবে। পুরোনো টিউটোরিয়াল অন্ধভাবে অনুসরণ করবে না।
+
+প্রধান লক্ষ্য:
+
+1. অত্যন্ত স্মুথ UI এবং দ্রুত অ্যাপ স্টার্টআপ।
+2. কম RAM ও কম স্টোরেজ ব্যবহার।
+3. দুর্বল প্রসেসরের ফোনেও ব্যবহারযোগ্য অভিজ্ঞতা।
+4. সম্পূর্ণ Offline-first routine tracking।
+5. বাংলা, হিন্দি ও ইংরেজি ভাষা।
+6. শক্তিশালী AI integration এবং ব্যবহারকারীর নিজস্ব মডেল নির্বাচন।
+7. Internet ছাড়াই ব্যবহারযোগ্য Local AI সুবিধা।
+8. সম্পূর্ণ Customizable Routine System।
+9. ব্যবহারকারীর ব্যক্তিগত তথ্যের নিরাপদ সংরক্ষণ।
+10. ভবিষ্যতে নতুন মডিউল যোগ করার উপযোগী Modular Architecture।
+
+কোনো ফিচার শুধু নামমাত্র যোগ করবে না। প্রতিটি ফিচারের বাস্তব Implementation, Error Handling এবং Testing থাকতে হবে।
+
+2. Application Technology Stack
+
+প্রথমে উপযুক্ত প্রযুক্তি নির্বাচন করে সংক্ষিপ্ত Architecture Plan তৈরি করবে।
+
+প্রস্তাবিত Stack:
+
+- Mobile Framework: Flutter এবং Dart।
+- Local Database: SQLite, প্রয়োজন অনুযায়ী Drift বা সমমানের নির্ভরযোগ্য সমাধান।
+- Secure Storage: Android Keystore-সমর্থিত নিরাপদ Storage।
+- Charts: Lightweight chart library।
+- Notifications: Local Notifications।
+- AI: Google Gemini API এবং Generic OpenAI-compatible Provider Adapter।
+- Networking: নির্ভরযোগ্য HTTP Client।
+- Local AI: উপযুক্ত ছোট মডেলের জন্য llama.cpp, ONNX Runtime অথবা সমর্থিত অন্য কোনো On-device Inference Engine।
+- Testing: Unit Tests, Widget Tests এবং Integration Tests।
+
+এগুলো বাধ্যতামূলকভাবে সব একসঙ্গে ব্যবহার করতে হবে এমন নয়। যেটি সবচেয়ে হালকা, নির্ভরযোগ্য এবং Android 6 থেকে নতুন Android সংস্করণে বাস্তবসম্মতভাবে কাজ করবে, সেটি নির্বাচন করবে।
+
+অপ্রয়োজনীয় বড় লাইব্রেরি, ভারী Animation Engine, অপ্রয়োজনীয় Background Service এবং অপ্রয়োজনীয় Network Request এড়িয়ে চলবে।
+
+3. Android 6–16 এবং 32-bit/64-bit Compatibility
+
+অ্যাপটি Android 6.0 থেকে Android 16 পর্যন্ত যত বেশি সম্ভব বাস্তব ডিভাইসে চালানোর জন্য তৈরি করবে।
+
+Compatibility requirements
+
+- Android 6.0 (API 23) থেকে শুরু করে Compatibility লক্ষ্য করবে।
+- নতুন Android সংস্করণগুলোর জন্য আধুনিক SDK ও নিরাপত্তা নীতি অনুসরণ করবে।
+- Google Play-তে প্রকাশের জন্য বর্তমান Target SDK requirement অনুসরণ করবে; ২০২৬ সালের ৩১ আগস্ট থেকে নতুন অ্যাপ ও আপডেটের জন্য Android 16 / API 36 বা তার বেশি Target SDK প্রয়োজন।
+- পুরোনো Android ডিভাইসে Unsupported API ব্যবহার করবে না।
+- প্রয়োজনীয় API ব্যবহারের আগে Version Check করবে।
+- Runtime Permission সঠিকভাবে পরিচালনা করবে।
+- Android 6-এর পুরোনো WebView, কম RAM, কম CPU এবং দুর্বল ইন্টারনেটের সীমাবদ্ধতা বিবেচনা করবে।
+- 32-bit ARM এবং 64-bit ARM ডিভাইসের জন্য উপযুক্ত Build Variant তৈরি করবে, যেখানে ব্যবহৃত Framework ও Native Dependencies সমর্থন করে।
+- Native Library-এর ABI compatibility যাচাই করবে।
+- কোনো 64-bit-only Native Dependency ব্যবহার করলে সেটি 32-bit ফোনে কীভাবে পরিচালিত হবে, তা নির্ধারণ করবে।
+- APK/AAB-এর আকার কমানোর জন্য ABI Splits, Resource Shrinking এবং উপযুক্ত Code Optimization ব্যবহার করবে।
+- Android 6–16 জুড়ে সব ফিচার সমানভাবে কাজ করবে—এমন মিথ্যা নিশ্চয়তা দেবে না। যে ফিচার কোনো OS বা হার্ডওয়্যারে সমর্থিত নয়, সেখানে সুন্দর Fallback দেখাবে।
+
+বিশেষভাবে মনে রাখবে: Android 6–16-এ অ্যাপের সাধারণ UI ও Routine Tracking চালানো এবং সব ফোনে একই Local AI Model চালানো এক বিষয় নয়। AI মডেলের জন্য CPU, RAM, Architecture এবং Storage আলাদাভাবে যাচাই করতে হবে।
+
+4. Premium UI/UX Design System
+
+অ্যাপটি দেখতে হবে অত্যন্ত আধুনিক, প্রিমিয়াম এবং পেশাদার।
+
+Visual style
+
+- Premium Dark Dashboard।
+- Clean Light Dashboard।
+- Modern Card Layout।
+- Subtle Gradients।
+- Glass-like Surface Effects, তবে প্রয়োজন ছাড়া ভারী Blur নয়।
+- সুন্দর Typography।
+- Smooth কিন্তু Lightweight Transitions।
+- Premium Progress Rings।
+- Interactive Charts।
+- Consistent Iconography।
+- সুন্দর Empty States।
+- Loading Skeletons।
+- Friendly Error Screens।
+- Micro-interactions।
+- Accessible Touch Targets।
+- ছোট স্ক্রিন ও বড় স্ক্রিনে Responsive Layout।
+
+ডিজাইনটি যেন কোনো সাধারণ Template-এর মতো না দেখায়। একটি নিজস্ব Brand Identity তৈরি করবে।
+
+অতিরিক্ত Shadow, ভারী Blur, অপ্রয়োজনীয় Particle Animation বা লাগাতার Animation দিয়ে অ্যাপকে ধীর করবে না।
+
+Navigation
+
+একটি সহজ Bottom Navigation তৈরি করবে:
+
+1. Home
+2. Routine
+3. Progress
+4. AI Assistant
+5. More / Settings
+
+প্রয়োজনে More সেকশনের মধ্যে Reports, History, Lifestyle, Profile এবং অন্যান্য মডিউল থাকবে।
+
+প্রতিটি Screen-এর Navigation, Back Button, Deep Link এবং State Restoration সঠিকভাবে কাজ করতে হবে।
+
+5. Onboarding & Setup Screen
+
+প্রথমবার অ্যাপ চালু করলে একটি সুন্দর Onboarding Flow দেখাবে।
+
+Screen 1: Welcome
+
+- CR Growth QS Logo।
+- Premium Welcome Animation।
+- অ্যাপটি কী কাজে লাগে তার সংক্ষিপ্ত পরিচিতি।
+- Get Started Button।
+- Language Selection।
+
+Screen 2: Personal Profile
+
+ব্যবহারকারী নিজের তথ্য দিতে পারবে:
+
+- নাম।
+- বয়স।
+- প্রোফাইল ছবি, ঐচ্ছিক।
+- পছন্দের ভাষা।
+- পছন্দের Theme।
+- Hair Care Goal।
+- Routine Reminder Preference।
+- চুল ও স্ক্যাল্পের অবস্থা সম্পর্কে ঐচ্ছিক তথ্য।
+- ব্যবহারকারী বর্তমানে কোন কোন Hair Care Product ব্যবহার করেন।
+- দৈনিক অভ্যাস সম্পর্কিত ঐচ্ছিক তথ্য।
+
+ব্যবহারকারীর অপ্রয়োজনীয় ব্যক্তিগত তথ্য বাধ্যতামূলক করবে না।
+
+বয়সের তথ্য ব্যক্তিগতভাবে সংরক্ষণ করবে। AI-কে পাঠানোর আগে অনুমতি এবং প্রাসঙ্গিকতা বিবেচনা করবে।
+
+Screen 3: Routine Setup
+
+ব্যবহারকারী প্রাথমিক Routine তৈরি করতে পারবে।
+
+প্রাথমিকভাবে নিচের তিনটি Routine Template থাকবে:
+
+1. Ketoconazole 2% Shampoo।
+2. Minoxidil 5%।
+3. Derma Roller / Microneedling Tracking।
+
+ব্যবহারকারী চাইলে অন্য Product, Habit বা Activity যোগ করতে পারবে।
+
+প্রতিটি Routine-এর জন্য থাকবে:
+
+- Routine Name।
+- Description।
+- Schedule।
+- Days of Week।
+- Time।
+- Reminder।
+- Start Date।
+- Optional End Date।
+- Frequency।
+- Notes।
+- Active/Paused Status।
+
+গুরুত্বপূর্ণ: Routine Template কোনো চিকিৎসা নির্দেশনা হিসেবে উপস্থাপন করবে না। ব্যবহারকারী বা চিকিৎসক নির্ধারিত Schedule অনুযায়ী অ্যাপটি Reminder ও Tracking করবে।
+
+Screen 4: Privacy & AI Setup
+
+ব্যবহারকারীকে স্পষ্টভাবে জানাবে:
+
+- তার Routine Data ডিফল্টভাবে ডিভাইসে সংরক্ষিত থাকবে।
+- AI ব্যবহার করলে প্রাসঙ্গিক তথ্য বাহ্যিক Provider-এ পাঠানো হতে পারে।
+- AI Provider-এর নিজস্ব Privacy Policy ও Data Handling Policy থাকতে পারে।
+- AI-তে তথ্য পাঠানোর আগে ব্যবহারকারীকে প্রয়োজনীয় Consent দিতে হবে।
+- AI বন্ধ থাকলেও অ্যাপের মূল ফিচারগুলো কাজ করবে।
+
+সব Setup শেষ হলে Home Dashboard-এ নিয়ে যাবে।
+
+6. Home Dashboard
+
+এটি হবে অ্যাপের সবচেয়ে গুরুত্বপূর্ণ Screen।
+
+ব্যবহারকারী অ্যাপ খুলেই আজকের সব প্রয়োজনীয় তথ্য দেখতে পারবে।
+
+Header
+
+উপরে দেখাবে:
+
+- Good Morning / Good Afternoon / Good Evening।
+- ব্যবহারকারীর নাম।
+- বর্তমান তারিখ।
+- Weekday।
+- Profile Avatar।
+- Notification Icon।
+- Quick Settings Access।
+
+Greeting বর্তমান স্থানীয় সময় অনুযায়ী পরিবর্তিত হবে।
+
+Today's Overview
+
+একটি সুন্দর Overview Card-এ দেখাবে:
+
+- আজকের মোট Routine।
+- Completed Routine।
+- Pending Routine।
+- Missed Routine।
+- আজকের Completion Percentage।
+- Daily Progress Ring।
+
+উদাহরণ:
+
+আজকের মোট Routine: 5
+Completed: 3
+Pending: 2
+Completion: 60%
+
+এই সংখ্যা উদাহরণমাত্র। বাস্তবে Database থেকে হিসাব করবে।
+
+Daily Routine Checklist
+
+প্রতিটি Routine-এর জন্য একটি আলাদা Card থাকবে।
+
+প্রতিটি Card-এ থাকবে:
+
+- Routine Name।
+- নির্ধারিত সময়।
+- সংক্ষিপ্ত Description।
+- Status।
+- Check / Uncheck Button।
+- Edit Button।
+- Optional Skip Button।
+- Reminder Indicator।
+
+ব্যবহারকারী একটি Routine সম্পন্ন করলে সেটি টিক দিতে পারবে। ভুল করে টিক দিলে আবার Untick করতে পারবে।
+
+একই Routine একাধিকবার টিক দিলে Duplicate Completion তৈরি হবে না।
+
+প্রতিটি Completion-এর Date এবং Time সংরক্ষণ করবে।
+
+ব্যবহারকারী চাইলে Routine-কে Completed, Skipped অথবা Missed হিসেবে চিহ্নিত করতে পারবে।
+
+Quick Actions
+
+Home Screen-এ থাকবে:
+
+- Add Routine।
+- Quick Log।
+- View Weekly Progress।
+- Open AI Assistant।
+- Edit Today's Schedule।
+- View History।
+
+Daily Lifestyle Log
+
+Home Screen থেকেই ব্যবহারকারী দৈনিক অভ্যাসের হিসাব দিতে পারবে।
+
+যেমন:
+
+- আজ কতটি বিড়ি খেয়েছে।
+- সিগারেটের সংখ্যা।
+- পানি পান করার আনুমানিক পরিমাণ।
+- ঘুমের সময়।
+- ব্যায়াম।
+- অন্যান্য Custom Habits।
+- নিজের নোট।
+
+বিড়ি ও সিগারেটের জন্য আলাদা Counter থাকবে।
+
+সংখ্যা পরিবর্তন করা যাবে। আগের Log Edit করা যাবে। ভুল Entry Delete করা যাবে।
+
+কোনো ব্যবহারকারী এসব অভ্যাস Track করতে না চাইলে সংশ্লিষ্ট Module বন্ধ করতে পারবে।
+
+অভ্যাসের হিসাব থেকে স্বয়ংক্রিয়ভাবে কোনো চিকিৎসাগত সিদ্ধান্ত বা নিশ্চিত Hair Growth Prediction তৈরি করবে না।
+
+7. Routine Management System
+
+এটি একটি সম্পূর্ণ Dynamic Routine Management Engine হবে।
+
+Routine CRUD
+
+ব্যবহারকারী পারবে:
+
+- Create Routine।
+- Edit Routine।
+- Delete Routine।
+- Duplicate Routine।
+- Pause / Resume Routine।
+- Reorder Routine।
+- Change Routine Time।
+- Change Routine Days।
+- Add New Schedule।
+- Remove Schedule।
+- Set Start Date।
+- Set End Date।
+- Enable / Disable Reminder।
+- Add Notes।
+- Change Frequency।
+- Change Category।
+
+Weekly Schedule Editor
+
+সপ্তাহের সাত দিন আলাদাভাবে দেখাবে:
+
+- Monday।
+- Tuesday।
+- Wednesday।
+- Thursday।
+- Friday।
+- Saturday।
+- Sunday।
+
+প্রতিটি দিনের অধীনে ব্যবহারকারী Routine যোগ করতে বা বাদ দিতে পারবে।
+
+প্রতিটি Routine-এর জন্য Morning, Afternoon, Evening অথবা Custom Time নির্বাচন করা যাবে।
+
+সপ্তাহের একাধিক দিনে একই Routine Copy করার সুবিধা থাকবে।
+
+ব্যবহারকারী চাইলে পুরো Schedule Reset করতে পারবে। Reset করার আগে Confirmation চাইবে।
+
+Flexible Scheduling
+
+শুধু সাত দিনের স্থির Schedule ব্যবহার করবে না। এমন Database Structure তৈরি করবে যাতে ভবিষ্যতে নিচের ফিচারগুলো যোগ করা যায়:
+
+- Daily।
+- Weekly।
+- Selected Weekdays।
+- Every N Days।
+- Custom Interval।
+- One-time Task।
+- Date-based Schedule।
+- Flexible Reminder Time।
+
+Important Schedule Logic
+
+- সময় পরিবর্তন করলে আগের Completion History নষ্ট হবে না।
+- Routine Delete করলে পুরোনো History সরাসরি মুছে যাবে না; Archive বা Soft Delete ব্যবহার করা যেতে পারে।
+- Time Zone পরিবর্তন হলে Reminder পুনরায় Schedule করবে।
+- অ্যাপ বন্ধ থাকলেও সমর্থিত Android Version-এ Local Notification কাজ করার ব্যবস্থা করবে।
+- OS Battery Optimization বা Notification Permission-এর কারণে Reminder দেরিতে আসতে পারে—এটি Settings-এ ব্যাখ্যা করবে।
+- একই Reminder একাধিকবার Schedule হবে না।
+- কোনো Routine Edit করলে পুরোনো Completion Record-এ অপ্রয়োজনীয় পরিবর্তন করবে না।
+
+8. Progress Dashboard
+
+একটি সম্পূর্ণ আলাদা Progress Screen তৈরি করবে।
+
+এখানে ব্যবহারকারী নিজের দীর্ঘমেয়াদি অগ্রগতি দেখতে পারবে।
+
+Overall Progress
+
+দেখাবে:
+
+- Account Creation Date।
+- Tracking Start Date।
+- মোট Tracking Days।
+- মোট Completed Routines।
+- মোট Missed Routines।
+- Overall Completion Rate।
+- Current Streak।
+- Best Streak।
+- ধারাবাহিকতা অনুযায়ী Weekly ও Monthly Summary।
+
+“কত দিন ধরে ব্যবহারকারী Routine করছে” এবং “কত দিন ধরে অ্যাপ ইনস্টল আছে”—এই দুটি আলাদা বিষয় হিসেবে দেখাবে।
+
+Calendar Heatmap
+
+একটি সুন্দর Calendar View তৈরি করবে।
+
+প্রতিটি দিন রঙ বা Indicator দিয়ে দেখাবে:
+
+- সব Routine সম্পন্ন।
+- আংশিক সম্পন্ন।
+- কোনো Routine সম্পন্ন হয়নি।
+- কোনো Data নেই।
+
+Missed Routine এবং কোনো রেকর্ড না থাকা দিনকে এক হিসাবে গণনা করবে না।
+
+Progress Charts
+
+Charts-এ থাকবে:
+
+- Daily Completion Trend।
+- Weekly Completion Trend।
+- Monthly Completion Trend।
+- Routine-wise Performance।
+- Habit Tracking Trend।
+- Long-term Consistency।
+
+Chart-এ বাস্তব Database Data ব্যবহার করবে।
+
+ভুয়া বা Random Progress Data দেখাবে না।
+
+9. Weekly Report Screen
+
+একটি আলাদা Weekly Report Screen তৈরি করবে।
+
+ব্যবহারকারী গত সাত দিনের রিপোর্ট সহজে দেখতে পারবে।
+
+প্রদর্শিত তথ্য:
+
+- সপ্তাহের তারিখসীমা।
+- মোট নির্ধারিত Routine।
+- মোট Completed।
+- মোট Missed।
+- মোট Skipped।
+- Completion Percentage।
+- প্রতিদিনের Completion Breakdown।
+- সবচেয়ে নিয়মিত দিন।
+- সবচেয়ে বেশি Routine মিস হওয়া দিন।
+- Routine-wise Performance।
+- বিড়ি ও সিগারেটের দৈনিক হিসাব।
+- ব্যবহারকারীর অন্যান্য Habit-এর Summary।
+
+প্রতিটি হিসাব Database থেকে সঠিকভাবে Calculate করবে।
+
+Missed Routine Analysis
+
+ব্যবহারকারী সপ্তাহে কয়টি Routine মিস করেছে, কোন দিনে মিস করেছে এবং কোন Routine সবচেয়ে বেশি অসম্পূর্ণ থাকছে তা দেখাবে।
+
+তবে কোনো দিন Routine না করার কারণ অনুমান করবে না।
+
+ব্যবহারকারী চাইলে প্রতিটি Missed Entry-এর জন্য Reason লিখতে পারবে।
+
+Weekly AI Summary
+
+AI চালু থাকলে ব্যবহারকারী অনুমতি দেওয়ার পর Weekly Report-এর Summary AI-কে পাঠানো যাবে।
+
+AI ব্যবহারকারীর বাস্তব তথ্যের ভিত্তিতে সাধারণ Habit Improvement Suggestion দিতে পারবে।
+
+AI বন্ধ থাকলেও Local Weekly Report সম্পূর্ণ কাজ করবে।
+
+10. History & Reports
+
+একটি পৃথক History Screen তৈরি করবে।
+
+ফিচার:
+
+- Date-wise History।
+- Routine-wise History।
+- Completed History।
+- Missed History।
+- Skipped History।
+- Daily Habit Logs।
+- Search।
+- Date Filter।
+- Routine Filter।
+- Export CSV।
+- Export JSON।
+- Shareable Summary।
+
+ব্যবহারকারী নির্দিষ্ট একটি দিন খুললে সেই দিনের সব Routine, Completion Time, Missed Entry এবং Lifestyle Log দেখতে পারবে।
+
+ভবিষ্যতে PDF Export যোগ করার জন্য Architecture প্রস্তুত রাখবে।
+
+ব্যবহারকারীর অনুমতি ছাড়া ব্যক্তিগত History কোনো বাহ্যিক সার্ভারে আপলোড করবে না।
+
+11. AI Assistant Screen
+
+এটি হবে অ্যাপের অন্যতম প্রধান Feature।
+
+AI Assistant ব্যবহারকারীর প্রশ্নের উত্তর দেবে এবং Routine ও Lifestyle Data থেকে প্রাসঙ্গিক Insight তৈরি করবে।
+
+AI Chat Interface
+
+একটি আধুনিক Chat Interface তৈরি করবে।
+
+ফিচার:
+
+- Text Chat।
+- Streaming Response, যদি Provider সমর্থন করে।
+- Conversation History।
+- New Chat।
+- Rename Conversation।
+- Delete Conversation।
+- Copy Response।
+- Retry।
+- Stop Generation।
+- Clear Chat।
+- Model Selector।
+- Provider Selector।
+- Local / Online AI Toggle।
+- Connection Status।
+- Token বা Usage Information, যেখানে Provider সমর্থন করে।
+
+AI Screen-এ একটি পরিষ্কার Model Selection Menu থাকবে।
+
+ব্যবহারকারী নিজের পছন্দের Model নির্বাচন করে Chat করতে পারবে।
+
+AI-এর Knowledge Context
+
+AI-কে নিচের তথ্য প্রাসঙ্গিকভাবে দেওয়া যাবে:
+
+1. ব্যবহারকারীর Profile।
+2. ব্যবহারকারীর বর্তমান Routine।
+3. Routine Schedule।
+4. Daily Completion History।
+5. Weekly Report।
+6. Missed Routine History।
+7. Lifestyle Log।
+8. বিড়ি ও সিগারেটের সংখ্যা।
+9. ব্যবহারকারীর নিজস্ব Goal।
+10. আগের AI Conversation-এর প্রাসঙ্গিক Summary।
+
+সব তথ্য প্রতিটি Request-এ অন্ধভাবে পাঠাবে না।
+
+একটি Context Builder তৈরি করবে, যা ব্যবহারকারীর প্রশ্ন অনুযায়ী প্রয়োজনীয় তথ্য বেছে নেবে।
+
+উদাহরণ:
+
+ব্যবহারকারী জিজ্ঞাসা করল: “এই সপ্তাহে আমার অগ্রগতি কেমন?”
+
+তখন AI-কে সংশ্লিষ্ট সপ্তাহের Completion Statistics, Missed Routines এবং প্রয়োজনীয় Habit Summary দেওয়া হবে।
+
+ব্যবহারকারী জিজ্ঞাসা করল: “আমি গত সাত দিনে কতটি বিড়ি খেয়েছি?”
+
+তখন AI-কে শুধু প্রাসঙ্গিক বিড়ির হিসাব ও প্রয়োজনীয় তারিখ দেওয়া হবে।
+
+এভাবে Context Size, Network Usage এবং Privacy Risk কমাবে।
+
+AI Recommendations
+
+AI ব্যবহারকারীকে সাহায্য করতে পারবে:
+
+- Routine Consistency বুঝতে।
+- Missed Routine-এর Pattern বিশ্লেষণ করতে।
+- বাস্তবসম্মত Reminder Schedule প্রস্তাব করতে।
+- Habit Tracking ব্যাখ্যা করতে।
+- সাপ্তাহিক অগ্রগতির Summary দিতে।
+- ব্যবহারকারীর প্রশ্নের ভিত্তিতে Routine Management পরামর্শ দিতে।
+- প্রয়োজন অনুযায়ী সাধারণ Hair Care Information দিতে।
+
+AI কোনো Routine পরিবর্তন করার পরামর্শ দিলে সরাসরি Database-এ পরিবর্তন করবে না।
+
+প্রথমে Proposed Changes দেখাবে। ব্যবহারকারী Confirm করলে তবেই Schedule পরিবর্তন হবে।
+
+AI কোনো রোগ নির্ণয় করবে না, চুল গজানোর নিশ্চয়তা দেবে না এবং চিকিৎসকের পরামর্শের বিকল্প হিসেবে নিজেকে উপস্থাপন করবে না।
+
+12. AI Provider Configuration
+
+Settings-এর মধ্যে একটি পূর্ণাঙ্গ AI Configuration Module তৈরি করবে।
+
+ব্যবহারকারী যেন কোনো নির্দিষ্ট কোম্পানির API-তে সীমাবদ্ধ না থাকে।
+
+A. Google AI Studio / Gemini
+
+Google Gemini হবে Default Online AI Provider।
+
+Google Gemini API-এর উপযুক্ত বর্তমান Endpoint ও Authentication পদ্ধতি অফিসিয়াল Documentation থেকে যাচাই করে Configure করবে।
+
+সাধারণ Gemini REST API-এর Base Endpoint:
+
+"https://generativelanguage.googleapis.com/v1beta"
+
+Model List এবং Generate Content API-এর বর্তমান পদ্ধতি যাচাই করে ব্যবহার করবে।
+
+Default Provider-এর জন্য ব্যবহারকারীকে Endpoint লিখতে হবে না।
+
+শুধু API Key Configure করলেই যেন সাধারণ ব্যবহার শুরু করতে পারে।
+
+API Key না থাকলে সুন্দর Setup Guide দেখাবে।
+
+অ্যাকাউন্টের Quota, Model Availability, Billing এবং API Key Permission অনুযায়ী Feature সীমিত হতে পারে। Free Access বা Unlimited Usage-এর মিথ্যা নিশ্চয়তা দেবে না।
+
+B. OpenAI-Compatible Custom Provider
+
+ব্যবহারকারী যেকোনো উপযুক্ত OpenAI-compatible API Configure করতে পারবে।
+
+Configuration Fields:
+
+- Provider Name।
+- Base URL।
+- API Key।
+- Model Name।
+- Custom Headers, প্রয়োজন হলে।
+- Authentication Mode।
+- Request Timeout।
+- Custom Parameters, ঐচ্ছিক।
+- Enable / Disable।
+- Test Connection।
+- Fetch Models।
+- Save Configuration।
+- Delete Provider।
+
+উদাহরণস্বরূপ ব্যবহারকারী নিজের পছন্দের Compatible Endpoint দিতে পারবে:
+
+"https://your-provider.example/v1"
+
+এটি কেবল উদাহরণ। কোনো কাল্পনিক Provider বাস্তবে কাজ করে বলে দাবি করবে না।
+
+প্রয়োজন অনুযায়ী নিচের API Operations সমর্থন করবে:
+
+- Model List।
+- Chat Completions।
+- Streaming Chat Completions।
+- Error Parsing।
+- Timeout Handling।
+- Retry।
+- Authentication Header Configuration।
+
+সব Provider একই API Feature সমর্থন করে না। Provider Capability অনুযায়ী UI-তে সমর্থিত ফিচার দেখাবে।
+
+C. Model Selector
+
+AI Screen-এ একটি Model Dropdown থাকবে।
+
+ফিচার:
+
+- Default Model।
+- Fetch Available Models।
+- Search Models।
+- Favorite Models।
+- Recently Used Models।
+- Provider-wise Grouping।
+- Model Information।
+- Test Model।
+- Custom Model Name।
+
+একাধিক Provider থাকলে ব্যবহারকারী সহজে Provider এবং Model পরিবর্তন করতে পারবে।
+
+Model List Fetch ব্যর্থ হলে ব্যবহারকারী Manual Model Name লিখতে পারবে।
+
+D. API Key Security
+
+API Key কখনো Source Code-এ Hardcode করবে না।
+
+Git Repository-তে API Key রাখবে না।
+
+API Key Local Secure Storage-এ রাখবে।
+
+Log, Crash Report বা Analytics-এ API Key প্রকাশ করবে না।
+
+যদি কোনো Provider-এর API Key Client App-এ ব্যবহারের কারণে ঝুঁকিতে পড়তে পারে, তাহলে সেই ঝুঁকি স্পষ্টভাবে জানাবে এবং সম্ভব হলে Restrictable Key অথবা Secure Backend Proxy ব্যবহারের বিকল্প দেখাবে।
+
+ব্যবহারকারীর নিজস্ব API Key থাকলে সেটি তার Configuration হিসেবে সংরক্ষিত থাকবে। কোনো Provider-এর কাছে অপ্রয়োজনীয়ভাবে অন্য Provider-এর Credentials পাঠাবে না।
+
+13. Offline Local AI Model
+
+AI Screen-এ একটি পৃথক Local AI Section থাকবে।
+
+ব্যবহারকারী ইন্টারনেট ছাড়াই Local Model-এর সঙ্গে Chat করতে পারবে, যদি উপযুক্ত Model ডাউনলোড করা থাকে এবং ডিভাইসটি সেটি চালানোর উপযোগী হয়।
+
+Local Model Requirements
+
+প্রাথমিক Model Package-এর জন্য 10 MB-কে একটি Size Target হিসেবে বিবেচনা করবে।
+
+তবে একটি গুরুত্বপূর্ণ প্রযুক্তিগত সীমাবদ্ধতা আছে: মাত্র 10 MB-এর একটি Model-কে আধুনিক, শক্তিশালী General-purpose Chat Model-এর সমতুল্য ধরে নেওয়া যাবে না। Quantization, Vocabulary, Architecture এবং Context Length অনুযায়ী কার্যক্ষমতা বদলে যায়।
+
+সুতরাং:
+
+- 10 MB-এর কাছাকাছি Lightweight Model বা Tiny Model পরীক্ষা করবে।
+- উপযুক্ত 10 MB Model না পাওয়া গেলে বাস্তব Model Size উল্লেখ করবে।
+- Model-এর কার্যক্ষমতা পরীক্ষা ছাড়া “Powerful AI” বলে প্রচার করবে না।
+- Tiny Model-এর জন্য সীমিত কাজ, FAQ এবং সহজ Routine Query-তে Focus করবে।
+- উন্নত Offline Chat-এর জন্য ঐচ্ছিক বড় Model Download-এর ব্যবস্থা রাখবে।
+- Model Download-এর আগে Download Size, প্রয়োজনীয় Storage, সম্ভাব্য RAM Requirement এবং Supported Architecture দেখাবে।
+
+Local Model Manager
+
+ফিচার:
+
+- Available Models।
+- Download Model।
+- Pause Download।
+- Resume Download।
+- Cancel Download।
+- Delete Model।
+- Model Size।
+- Model Status।
+- Compatibility Check।
+- Memory Requirement।
+- Download Progress।
+- Default Local Model।
+- Local Model Test।
+
+সব Model অ্যাপের সঙ্গে Bundle করবে না। প্রয়োজন হলে ব্যবহারকারী আলাদাভাবে ডাউনলোড করবে, যাতে APK ছোট থাকে।
+
+Offline AI Architecture
+
+Local AI যেন ইন্টারনেট ছাড়া কাজ করতে পারে, সে জন্য:
+
+- Model Inference ডিভাইসে চালাবে।
+- Local Routine Data পড়ার জন্য নিরাপদ Context Builder ব্যবহার করবে।
+- Network Call ছাড়াই সাধারণ প্রশ্নের উত্তর দেওয়ার চেষ্টা করবে।
+- Model Download না থাকলে পরিষ্কারভাবে জানাবে।
+- Device Memory কম হলে ছোট Model নির্বাচন বা Unsupported State দেখাবে।
+- Inference চলাকালে UI Freeze হতে দেবে না।
+- সম্ভব হলে Streaming Token Output দেখাবে।
+- Model Inference Cancel করার ব্যবস্থা রাখবে।
+- Local AI ব্যবহার করার সময় কোনো ব্যক্তিগত তথ্য স্বয়ংক্রিয়ভাবে Online Provider-এ পাঠাবে না।
+
+Local Model-এর জন্য এমন একটি Adapter Interface তৈরি করবে, যাতে ভবিষ্যতে নতুন Inference Engine যোগ করা যায়।
+
+14. AI Context, Privacy & Consent
+
+AI Integration-এর জন্য একটি আলাদা Context Management Layer তৈরি করবে।
+
+Context Sharing
+
+প্রথমবার Online AI ব্যবহার করার আগে একটি পরিষ্কার Consent Screen দেখাবে।
+
+ব্যবহারকারী নির্বাচন করতে পারবে:
+
+- শুধু বর্তমান প্রশ্ন পাঠানো।
+- বর্তমান প্রশ্নের সঙ্গে প্রয়োজনীয় Routine Summary পাঠানো।
+- নির্বাচিত History পাঠানো।
+- Weekly Report পাঠানো।
+- Lifestyle Statistics পাঠানো।
+- প্রতিটি Request-এর আগে Confirmation।
+- AI Context Sharing সম্পূর্ণ বন্ধ।
+
+প্রয়োজন অনুযায়ী ব্যবহারকারীর দেওয়া তথ্য ছাড়া অন্য কোনো Sensitive Data পাঠাবে না।
+
+শুধু AI-এর কাছে তথ্য প্রয়োজন হতে পারে বলে সম্পূর্ণ Database পাঠাবে না।
+
+Privacy Controls
+
+Settings-এ থাকবে:
+
+- AI Context Sharing।
+- Online AI Enable / Disable।
+- Local-only Mode।
+- Clear AI History।
+- Delete Local Data।
+- Export Personal Data।
+- Reset Application।
+- API Key Management।
+
+ব্যবহারকারী যেন যেকোনো সময় AI History মুছে ফেলতে পারে।
+
+ব্যবহারকারীর অনুমতি ছাড়া কোনো Cloud Sync চালু করবে না।
+
+15. Lifestyle & Habit Tracking Module
+
+একটি পৃথক Lifestyle Module তৈরি করবে।
+
+ব্যবহারকারী নিজের অভ্যাস ও দৈনিক তথ্য Track করতে পারবে।
+
+Habit Categories
+
+- Smoking।
+- Bidi Count।
+- Cigarette Count।
+- Sleep।
+- Water Intake।
+- Exercise।
+- Hair Care।
+- Scalp Care।
+- Custom Habits।
+
+Daily Logging
+
+প্রতিটি Habit-এর জন্য থাকবে:
+
+- Value।
+- Unit।
+- Date।
+- Time, প্রয়োজন হলে।
+- Optional Note।
+- Edit।
+- Delete।
+- Daily Summary।
+
+বিড়ি ও সিগারেটের সংখ্যা আলাদাভাবে সংরক্ষণ করবে।
+
+একই দিনে একাধিকবার Log করা গেলে সেগুলো যোগ করে Daily Total তৈরি করবে। একই Entry Edit করলে Double Count হবে না।
+
+Trend Analysis
+
+ব্যবহারকারী গত সাত দিন, ৩০ দিন অথবা Custom Date Range-এর হিসাব দেখতে পারবে।
+
+AI-কে ডেটা দিলে এটি কেবল বাস্তব Trend বর্ণনা করবে। পর্যাপ্ত তথ্য ছাড়া কোনো নির্দিষ্ট অভ্যাসকে চুল পড়ার নিশ্চিত কারণ বলে দাবি করবে না।
+
+16. Medication & Scalp Care Safety
+
+অ্যাপের Routine Engine-এ নিম্নলিখিত Product Template থাকবে:
+
+- Ketoconazole 2% Shampoo।
+- Minoxidil 5%।
+- Derma Roller / Microneedling।
+
+ব্যবহারকারী এগুলোকে নিজের Routine হিসেবে যোগ, Edit বা Remove করতে পারবে।
+
+Safety Rules
+
+- Ketoconazole Shampoo-এর ব্যবহার চিকিৎসক বা পণ্যের নির্দেশনা অনুযায়ী Schedule করতে হবে।
+- Minoxidil-এর Dose, Frequency এবং ব্যবহারবিধি ব্যবহারকারীর অনুমোদিত নির্দেশনা অনুযায়ী হবে।
+- ডিফল্টভাবে নির্দিষ্ট Dose বা Schedule-কে সবার জন্য চিকিৎসাগতভাবে সঠিক বলে ঘোষণা করবে না।
+- Derma Roller / Microneedling-এর ক্ষেত্রে Needle Length, Sterilization, Skin Condition এবং Infection Risk গুরুত্বপূর্ণ।
+- Microneedling-এর পর Minoxidil ব্যবহারে Irritation এবং Systemic Absorption-এর ঝুঁকি বিবেচনা করতে হবে।
+- Derma Roller-এর দিন Minoxidil ব্যবহার স্বয়ংক্রিয়ভাবে অনুমোদন করবে না।
+- চিকিৎসকের নির্দেশনা ছাড়া Microneedling ও Minoxidil-এর জন্য নিরাপদ বিরতির সময় নিজে থেকে নিশ্চিতভাবে নির্ধারণ করবে না।
+- ব্যবহারকারীকে চিকিৎসকের পরামর্শ অনুযায়ী Schedule সেট করার সুবিধা দেবে।
+- স্ক্যাল্পে ক্ষত, সংক্রমণ বা তীব্র জ্বালা থাকলে Routine চালিয়ে যাওয়ার আগে চিকিৎসা-পরামর্শ নেওয়ার সতর্কতা দেখাবে।
+
+অ্যাপটি কোনো রোগ নির্ণয় বা চিকিৎসা-নির্দেশ প্রদানকারী সফটওয়্যার হিসেবে উপস্থাপিত হবে না। এটি মূলত Personal Routine Management এবং Tracking Tool।
+
+17. Notification & Reminder System
+
+একটি নির্ভরযোগ্য Reminder System তৈরি করবে।
+
+ফিচার:
+
+- Daily Reminder।
+- Multiple Reminders।
+- Custom Time।
+- Routine-specific Reminder।
+- Weekly Schedule।
+- Snooze।
+- Mark Completed।
+- Skip Today।
+- Disable Reminder।
+- Quiet Hours।
+- Reminder Sound Preference।
+
+Notification থেকে সরাসরি Routine Complete করার সুবিধা থাকলে সেটিও যোগ করবে।
+
+Reminder Schedule পরিবর্তন করলে পুরোনো Notification Cancel করে নতুন Schedule তৈরি করবে।
+
+Android 13 এবং পরবর্তী সংস্করণে প্রয়োজনীয় Notification Permission সঠিকভাবে পরিচালনা করবে।
+
+Android 6–12-এ প্রযোজ্য পুরোনো Permission Model অনুসরণ করবে।
+
+Battery Optimization ও Doze-এর কারণে Reminder-এর Timing প্রভাবিত হতে পারে—এ বিষয়ে বাস্তবসম্মত নির্দেশনা দেবে।
+
+18. Settings Screen
+
+Settings Screen-কে একটি পূর্ণাঙ্গ Control Center হিসেবে তৈরি করবে।
+
+Appearance
+
+- Light Mode।
+- Dark Mode।
+- System Default।
+- Accent Color।
+- Font Size।
+- Compact / Comfortable Layout।
+- Reduced Motion, যেখানে সমর্থিত।
+
+Language
+
+তিনটি ভাষা:
+
+1. বাংলা।
+2. English।
+3. हिन्दी।
+
+প্রথমবার অ্যাপ চালু হলে ডিফল্ট ভাষা নির্বাচন করবে:
+
+- ব্যবহারকারীর System Language সমর্থিত হলে সেটি ব্যবহার করবে।
+- System Language বাংলা হলে বাংলা।
+- English হলে English।
+- Hindi হলে हिन्दी।
+- অন্য কোনো ভাষা হলে ডিফল্ট হিসেবে বাংলা।
+- ব্যবহারকারী চাইলে Settings থেকে ভাষা পরিবর্তন করতে পারবে।
+
+Language পরিবর্তন করলে পুরো UI পরিবর্তন হবে।
+
+শুধু Home Screen নয়; Navigation, Dialog, Notification, Error Message, Settings এবং AI-related UI-ও অনুবাদ করতে হবে।
+
+সব UI Text Localization Resource থেকে আসবে। কোডে সরাসরি বাংলা বা ইংরেজি String ছড়িয়ে রাখবে না।
+
+AI Response-এর ভাষা ব্যবহারকারীর পছন্দ অনুযায়ী হবে, যদি নির্বাচিত Model সেটি সমর্থন করে।
+
+Routine Settings
+
+- Default Reminder Time।
+- Weekly Start Day।
+- Routine Categories।
+- Default Routine Template।
+- Completion Behavior।
+- Missed Routine Handling।
+
+Data Management
+
+- Storage Usage।
+- Export Data।
+- Import Data।
+- Backup।
+- Restore।
+- Clear History।
+- Delete All Data।
+- Reset Application।
+
+AI Settings
+
+- Provider Manager।
+- API Key।
+- Base URL।
+- Model Selector।
+- Connection Test।
+- Default Provider।
+- Local Model Manager।
+- AI Context Sharing।
+- AI History।
+- Local-only Mode।
+
+19. Local Database & Data Architecture
+
+অ্যাপটি Offline-first হবে।
+
+Routine Tracking, Checklist, Progress Dashboard, Weekly Report, History এবং Habit Logging-এর জন্য ইন্টারনেটের প্রয়োজন হবে না।
+
+প্রাথমিকভাবে একটি Local Database ব্যবহার করবে।
+
+প্রস্তাবিত Entities:
+
+profiles
+
+- id।
+- display_name।
+- age, optional।
+- photo_path, optional।
+- preferred_language।
+- theme_mode।
+- created_at।
+- updated_at।
+
+routines
+
+- id।
+- title।
+- description।
+- category।
+- start_date।
+- end_date, optional।
+- status।
+- created_at।
+- updated_at।
+- archived_at, optional।
+
+routine_schedules
+
+- id।
+- routine_id।
+- weekday বা date।
+- time।
+- frequency।
+- reminder_enabled।
+- created_at।
+- updated_at।
+
+routine_completions
+
+- id।
+- routine_id।
+- scheduled_date।
+- status।
+- completed_at, optional।
+- note, optional।
+- created_at।
+- updated_at।
+
+habit_logs
+
+- id।
+- habit_type।
+- value।
+- unit।
+- log_date।
+- logged_at।
+- note, optional।
+- created_at।
+- updated_at।
+
+ai_providers
+
+- id।
+- provider_name।
+- base_url।
+- selected_model।
+- enabled।
+- capability_config।
+- created_at।
+- updated_at।
+
+API Key আলাদাভাবে Secure Storage-এ রাখবে। সাধারণ Database-এ Plaintext API Key সংরক্ষণ করবে না।
+
+ai_conversations
+
+- id।
+- title।
+- provider_id, optional।
+- model_id, optional।
+- created_at।
+- updated_at।
+
+ai_messages
+
+- id।
+- conversation_id।
+- role।
+- content।
+- created_at।
+
+app_settings
+
+- key।
+- value।
+- updated_at।
+
+Schema Migration, Database Transaction, Input Validation এবং Error Recovery সঠিকভাবে Implement করবে।
+
+প্রয়োজন অনুযায়ী Schema উন্নত করতে পারবে, তবে Data Integrity নষ্ট করা যাবে না।
+
+20. Architecture & Code Quality
+
+কোডবেসকে Modular Architecture-এ সাজাবে।
+
+প্রস্তাবিত Layers:
+
+- Presentation Layer।
+- Application / State Management Layer।
+- Domain Layer।
+- Data Layer।
+- Local Database Layer।
+- Notification Layer।
+- AI Provider Layer।
+- Local AI Inference Layer।
+- Security & Storage Layer।
+
+UI Widget-এর মধ্যে সব Business Logic লিখবে না।
+
+Routine Calculation, Streak Calculation, Weekly Reports এবং AI Context Builder-এর জন্য আলাদা Testable Service তৈরি করবে।
+
+প্রতিটি গুরুত্বপূর্ণ Feature-এর জন্য:
+
+- Loading State।
+- Success State।
+- Error State।
+- Empty State।
+- Retry Logic।
+- Input Validation।
+- Appropriate Logging।
+
+থাকবে।
+
+অপ্রয়োজনীয় Global State এবং Duplicate Business Logic এড়িয়ে চলবে।
+
+21. Error Handling & Reliability
+
+অ্যাপটি বাস্তবে ব্যবহারের সময় যেন নির্ভরযোগ্য থাকে।
+
+যেসব Error Handle করতে হবে:
+
+- Database Error।
+- Corrupted Local Data।
+- Notification Permission Denied।
+- AI Provider Unavailable।
+- Invalid API Key।
+- Invalid Endpoint।
+- Model Not Found।
+- Rate Limit।
+- Network Timeout।
+- Malformed JSON।
+- Unsupported Streaming Response।
+- Local Model Load Failure।
+- Insufficient Memory।
+- Insufficient Storage।
+- Import Failure।
+- Export Failure।
+
+Error Message ব্যবহারকারীর নির্বাচিত ভাষায় দেখাবে।
+
+কোনো Error হলে সম্পূর্ণ অ্যাপ Crash করবে না।
+
+AI Provider Error হলে Local Routine Tracking বন্ধ হবে না।
+
+22. Performance Optimization
+
+অ্যাপটি কম ক্ষমতার ফোনের জন্য Optimize করবে।
+
+লক্ষ্য:
+
+- দ্রুত App Startup।
+- Smooth Scrolling।
+- Lightweight Animations।
+- Efficient Database Queries।
+- Pagination বা Lazy Loading, যেখানে প্রয়োজন।
+- Background Task সীমিত রাখা।
+- অপ্রয়োজনীয় Polling এড়িয়ে চলা।
+- Charts-এ অতিরিক্ত Data একসঙ্গে Render না করা।
+- Image Compression ও Caching।
+- Memory Leak এড়ানো।
+- AI Context সীমিত রাখা।
+- অপ্রয়োজনীয় Package বাদ দেওয়া।
+
+32-bit এবং 64-bit উভয় উপযুক্ত Build-এর জন্য Performance Test করবে।
+
+Low-RAM ডিভাইসে Local AI সমর্থিত না হলে AI Module-এর Offline Text Rules বা ছোট FAQ System-এর মতো কার্যকর Fallback দিতে পারো। তবে Rule-based Response-কে আসল LLM বলে উপস্থাপন করবে না।
+
+23. Backup, Restore & Portability
+
+ব্যবহারকারীর তথ্য যেন সহজে হারিয়ে না যায়।
+
+ফিচার:
+
+- Manual Backup।
+- Restore Backup।
+- JSON Export।
+- CSV Export।
+- Backup Validation।
+- Import Preview।
+- Duplicate Detection।
+- Restore Confirmation।
+
+Backup File-এ প্রয়োজনীয় Routine, Completion History, Habit Logs এবং Settings অন্তর্ভুক্ত করবে।
+
+ব্যবহারকারী চাইলে Sensitive Data বাদ দিয়ে Export করতে পারবে।
+
+Backup-এ API Key বা অন্যান্য Secret রাখবে না।
+
+Cloud Backup ভবিষ্যতের Optional Feature হিসেবে রাখতে পারো, তবে ব্যবহারকারীর অনুমতি ছাড়া চালু করবে না।
+
+24. Dashboard Modules & Additional Features
+
+মূল ফিচারগুলোর পাশাপাশি প্রয়োজন অনুযায়ী আরও কিছু কার্যকর Module যোগ করবে।
+
+Suggested Modules
+
+- Hair Care Calendar।
+- Routine Templates।
+- Personal Goals।
+- Streak Tracker।
+- Daily Journal।
+- Weekly Review।
+- Monthly Review।
+- Reminder Center।
+- Product List।
+- Product Notes।
+- AI Insight History।
+- App Usage Settings।
+- Data Storage Manager।
+- Accessibility Settings।
+
+প্রতিটি নতুন Module বাস্তব প্রয়োজন অনুযায়ী তৈরি করবে।
+
+শুধু অ্যাপকে বড় দেখানোর জন্য অপ্রয়োজনীয় Menu বা Fake Feature যোগ করবে না।
+
+প্রাথমিক Version-এ Core Features সম্পূর্ণ করা বেশি গুরুত্বপূর্ণ।
+
+25. Security Requirements
+
+- Local Database-এ Input Validation।
+- Secure Storage ব্যবহার।
+- API Key Redaction।
+- Sensitive Logging নিষিদ্ধ।
+- External URL Validation।
+- HTTPS ব্যবহার।
+- Import File Validation।
+- Local File Access সীমিত রাখা।
+- প্রয়োজন ছাড়া কোনো Permission চাওয়া যাবে না।
+- কোনো Hidden Data Collection থাকবে না।
+- Analytics থাকলে ঐচ্ছিক ও Privacy-aware হবে।
+- ব্যবহারকারী Data Delete করলে সংশ্লিষ্ট Local Data বাস্তবেই মুছতে হবে।
+
+AI Provider-কে দেওয়া তথ্য সেই Provider-এর Privacy Terms-এর অধীন হতে পারে। অ্যাপে এই বিষয়টি পরিষ্কারভাবে জানাবে।
+
+26. Testing & Quality Assurance
+
+অ্যাপের প্রতিটি গুরুত্বপূর্ণ Feature পরীক্ষা করবে।
+
+Routine Tests
+
+- Routine Create।
+- Routine Edit।
+- Routine Delete।
+- Routine Pause / Resume।
+- Weekday Selection।
+- Time Change।
+- Completion Toggle।
+- Duplicate Completion Prevention।
+- Weekly Summary Calculation।
+- Streak Calculation।
+- Time Zone Change।
+
+Habit Tests
+
+- Bidi Counter।
+- Cigarette Counter।
+- Multiple Daily Logs।
+- Edit Existing Log।
+- Delete Existing Log।
+- Correct Daily Total।
+
+AI Tests
+
+- Gemini Connection।
+- Invalid API Key।
+- Custom Base URL।
+- Model Fetch।
+- Manual Model Selection।
+- Streaming Response।
+- Non-streaming Response।
+- Provider Error।
+- Rate Limit।
+- Offline Mode।
+- Local Model Missing।
+- Local Model Load Failure।
+- Context Consent।
+- API Key Redaction।
+
+Platform Tests
+
+সম্ভব হলে নিচের Environment-এ পরীক্ষা করবে:
+
+- Android 6।
+- Android 8।
+- Android 10।
+- Android 12।
+- Android 13।
+- Android 14।
+- Android 15।
+- Android 16।
+
+এছাড়া 32-bit ও 64-bit সমর্থিত ডিভাইস, Low RAM, ছোট স্ক্রিন এবং দুর্বল Network-এর Test Case রাখবে।
+
+যে ডিভাইসে সরাসরি পরীক্ষা করা সম্ভব হয়নি, সেখানে Tested বলে দাবি করবে না।
+
+27. Deliverables
+
+শেষ পর্যন্ত সম্পূর্ণ Project Deliver করবে।
+
+প্রয়োজনীয় Deliverables:
+
+1. সম্পূর্ণ Source Code।
+2. Project Structure।
+3. Setup Instructions।
+4. Build Instructions।
+5. Android APK Build Configuration।
+6. Android App Bundle Configuration।
+7. Localization Files।
+8. Database Schema এবং Migration।
+9. AI Provider Adapter।
+10. Gemini Integration।
+11. OpenAI-Compatible Provider Integration।
+12. Local Model Manager।
+13. Routine Engine।
+14. Progress Dashboard।
+15. Weekly Report।
+16. Lifestyle Tracker।
+17. Notification System।
+18. Error Handling।
+19. Unit Tests।
+20. Integration Tests।
+21. README।
+22. Troubleshooting Guide।
+23. Compatibility Notes।
+24. Release Checklist।
+
+Build সম্ভব হলে Debug APK তৈরি করবে এবং Release Build-এর জন্য প্রয়োজনীয় নির্দেশনা দেবে।
+
+কোনো ফাইল, Service বা গুরুত্বপূর্ণ Feature অসম্পূর্ণ রেখে সেটিকে সম্পূর্ণ বলে ঘোষণা করবে না।
+
+28. Development Workflow
+
+কাজটি নিচের ধাপে সম্পন্ন করবে।
+
+Phase 1: Research & Planning
+
+- অফিসিয়াল Documentation যাচাই।
+- Android Compatibility Analysis।
+- Framework Selection।
+- Database Design।
+- UI/UX Architecture।
+- AI Provider Architecture।
+- Local AI Feasibility Analysis।
+
+Phase 2: Foundation
+
+- Project Setup।
+- Theme System।
+- Localization।
+- Navigation।
+- Database।
+- Profile Setup।
+- Settings।
+
+Phase 3: Core Application
+
+- Home Dashboard।
+- Routine Management।
+- Daily Checklist।
+- Notifications।
+- History।
+- Weekly Report।
+- Progress Charts।
+- Habit Tracking।
+
+Phase 4: AI
+
+- AI Chat।
+- Gemini Integration।
+- Generic OpenAI-compatible Provider।
+- Model Selector।
+- Secure Configuration।
+- Context Builder।
+- Privacy Consent।
+- Local AI Model Manager।
+
+Phase 5: Polish & Optimization
+
+- Animations।
+- Accessibility।
+- Performance।
+- Error Handling।
+- Compatibility Testing।
+- Database Migration Testing।
+- Security Review।
+
+Phase 6: Release
+
+- Build Verification।
+- APK/AAB।
+- README।
+- Installation Instructions।
+- Release Checklist।
+
+প্রতিটি Phase শেষ হলে Build এবং Test করবে। আগের Phase-এর মৌলিক সমস্যা সমাধান না করে পরের Phase-এ এগোবে না।
+
+29. Final Acceptance Criteria
+
+অ্যাপটি তখনই Complete হিসেবে বিবেচিত হবে যখন:
+
+- Home Dashboard বাস্তব Database Data দেখাবে।
+- ব্যবহারকারী Routine Add, Edit, Delete ও Toggle করতে পারবে।
+- Daily, Weekly এবং Long-term Progress সঠিক হবে।
+- বিড়ি ও সিগারেটের হিসাব সঠিকভাবে সংরক্ষিত হবে।
+- বাংলা, হিন্দি ও ইংরেজি UI কাজ করবে।
+- Light, Dark এবং System Theme কাজ করবে।
+- AI Provider Configure করা যাবে।
+- Gemini API-এর Default Configuration থাকবে।
+- Custom OpenAI-compatible Endpoint ব্যবহার করা যাবে।
+- Model List ও Manual Model Selection কাজ করবে।
+- Local AI-এর বাস্তব Model Loading ও Inference Implement করা থাকবে, যেখানে ডিভাইস সমর্থন করে।
+- AI Context Sharing ব্যবহারকারীর Consent অনুযায়ী হবে।
+- Internet ছাড়াই Core Routine Features কাজ করবে।
+- Local Data Restart-এর পরেও থাকবে।
+- Backup এবং Restore কাজ করবে।
+- Error Handling থাকবে।
+- সমর্থিত Android সংস্করণে প্রয়োজনীয় Compatibility Test পাস করবে।
+- কোনো গুরুত্বপূর্ণ বাটন নিষ্ক্রিয় বা Fake থাকবে না।
+- Build ও Test-এর ফলাফল যাচাই করা থাকবে।
+
+30. Final Instruction
+
+এখন প্রথমে বর্তমান Project Repository ও বিদ্যমান কোডবেস পরীক্ষা করো, যদি থাকে। এরপর একটি সংক্ষিপ্ত Architecture Plan তৈরি করে বাস্তব Implementation শুরু করো।
+
+আগে থেকেই কোনো Project থাকলে অপ্রয়োজনীয়ভাবে সবকিছু নতুন করে লিখবে না। বিদ্যমান কাজ বুঝে প্রয়োজনীয় পরিবর্তন করবে।
+
+শুধু UI Mockup, Screenshot, Design Proposal অথবা Pseudocode দিয়ে কাজ শেষ করবে না। বাস্তব কার্যকরী Application তৈরি করবে।
+
+প্রযুক্তিগত সীমাবদ্ধতা থাকলে তা লুকাবে না। বিশেষ করে Android 6 Compatibility, 32-bit Native Dependencies এবং 10 MB Local AI Model-এর কার্যক্ষমতা সম্পর্কে বাস্তব তথ্য ব্যবহার করবে।
+
+সবশেষে Source Code, Build Configuration, Test Results এবং Installation Instructions প্রদান করবে।
+
+Final Goal: CR Growth QS-কে একটি প্রিমিয়াম, আধুনিক, Offline-first, AI-powered Hair Care & Personal Progress Tracking Application হিসেবে তৈরি করা—যেটি ব্যবহারকারীর দৈনন্দিন Routine পরিচালনা করবে, দীর্ঘমেয়াদি অগ্রগতি বিশ্লেষণ করবে এবং Online ও Local AI-এর মাধ্যমে ব্যক্তিগতভাবে সহায়তা দেবে।
+
+
+CR Growth QS — Additional Prompt: Default Weekly Hair-Care Routine & Smart Schedule Integration
+
+1. Main Instruction
+
+Integrate this specification into the existing CR Growth QS project as a separate additional instruction. Do not rewrite, replace, remove, or unnecessarily modify any feature or requirement in the original master prompt.
+
+The routine specified below must be configured as the app's default primary weekly routine. It must appear automatically in the Routine Tracker, Home Dashboard, calendar, daily checklist, notifications, and weekly progress reports.
+
+The routine must cover all seven days of the week, Monday through Sunday. Users must be able to track each scheduled task as Pending, Completed, Skipped, or Rescheduled.
+
+2. Default Routine Items
+
+Configure these three separate routine items:
+
+1. Ketoconazole 2% Shampoo
+   
+   - Frequency: Three scheduled days per week.
+   - Preferred time: Afternoon.
+   - Default reminder time: 2:00 PM.
+   - Must not appear as a daily task on all seven days.
+
+2. Minoxidil 5%
+   
+   - Frequency: Every day, seven days per week.
+   - Morning reminder: 9:30 AM.
+   - Night reminder: 11:00 PM.
+   - Display two separate daily checklist items, one for the morning and one for the night.
+   - On Thursday, the morning Minoxidil task remains scheduled. The afternoon and evening rules for the other items must be handled separately.
+
+3. Derma Roller / Microneedling
+   
+   - Frequency: Once per week.
+   - The default scheduled day is Thursday, subject to the safety rules below.
+   - The app must show this as a separate task, not as part of the Ketoconazole or Minoxidil checklist item.
+
+3. Seven-Day Weekly Schedule
+
+Generate a complete Monday-to-Sunday schedule using the following requirements.
+
+- Minoxidil 5%: Show the morning task at 9:30 AM and the night task at 11:00 PM every day, Monday through Sunday.
+- Ketoconazole 2% Shampoo: Schedule three afternoons per week, with Thursday included as one of the three days.
+- Derma Roller / Microneedling: Assign one weekly session, with Thursday as the intended default day.
+- Do not schedule Ketoconazole on every day.
+- Do not create duplicate reminders for the same routine item and time.
+- Keep the schedule consistent across the Home Dashboard, calendar, notifications, and weekly report.
+
+Thursday Special Rule
+
+Thursday must be handled as a special routine day in the weekly planner:
+
+- Morning: Show the Minoxidil 5% task at 9:30 AM.
+- Afternoon: Show the Ketoconazole 2% Shampoo task at 2:00 PM only if it is safe and appropriate to use that day.
+- Derma Roller / Microneedling: Display a separate reminder for the intended session, with a configurable afternoon/evening time.
+- If the user has a clinician-approved instruction to avoid Ketoconazole on the microneedling day, automatically mark the Thursday shampoo task as withheld for safety and do not issue its reminder.
+- Do not automatically schedule or recommend Minoxidil or Ketoconazole application immediately before or after microneedling. The app must respect an appropriate clinician-specified waiting period.
+
+The user's intended Thursday condition is that the morning Minoxidil reminder remains visible, the weekly Derma Roller task is scheduled, and the Ketoconazole task is handled according to the safety restriction. Do not silently claim that all three treatments can safely be used on the same day.
+
+Following Day Rule
+
+From Friday onward, resume the normal recurring schedule, while respecting any safety-related waiting period associated with microneedling. Do not permanently remove or shift the weekly routine merely because one Thursday task was withheld.
+
+The scheduler must distinguish between:
+
+- A regularly scheduled task.
+- A task temporarily withheld for safety.
+- A task skipped by the user.
+- A task rescheduled by the user.
+
+Do not count a safety-withheld task as user non-compliance.
+
+4. Important Medical Safety Requirements
+
+This application is a routine tracker, not a prescribing system. Do not invent a medical prescription or assume that the user has received professional approval for microneedling.
+
+- Preserve the requested product names and intended frequencies as user-configured routine preferences.
+- Clearly distinguish a user's preferred schedule from a clinician-confirmed treatment plan.
+- Minoxidil 5% twice daily must not be presented as universally appropriate for every formulation or individual. Display the product-label or clinician-directed dosage and usage instructions.
+- Minoxidil should not be applied to irritated, injured, or freshly microneedled skin. Do not assume that skipping it for only one day is always sufficient; the appropriate waiting period depends on the procedure and medical advice.
+- Do not automatically instruct the user to apply Ketoconazole shampoo to freshly microneedled or irritated skin.
+- Make it possible to mark a task as “Withheld for Safety” without losing the weekly schedule.
+- Provide a configurable clinician-approved waiting period after microneedling, and prevent incompatible reminders during that period.
+- If the user has not confirmed that the combination and timing are appropriate, show a brief safety notice and allow the schedule to be reviewed before activating treatment reminders.
+
+The application must not claim that the routine is medically approved unless the user explicitly records that confirmation.
+
+5. Smart Routine Scheduler
+
+Implement a reusable routine scheduling system rather than hardcoding reminders into individual screens.
+
+Each routine item should support:
+
+- Name and product strength.
+- Scheduled weekdays.
+- Preferred time.
+- Enabled/disabled state.
+- Completion status.
+- Safety restrictions.
+- Optional clinician instructions.
+- Reminder notification settings.
+- Last completed date.
+- Weekly completion statistics.
+
+Store the routine configuration locally so that it works offline. Preserve the same schedule after app restarts and device reboots. If the original project already uses a database or notification system, integrate with it rather than creating a conflicting duplicate system.
+
+Use the device's local timezone. Handle notification permissions, missed reminders, daylight-saving changes where applicable, and Android battery restrictions gracefully.
+
+6. Home Dashboard and Calendar
+
+Display the following information clearly:
+
+- Today's date and weekday.
+- Today's scheduled routine items and their times.
+- Separate morning, afternoon, and night sections.
+- A completion checkbox for each task.
+- A distinct safety-withheld state.
+- The next scheduled reminder.
+- Today's completion percentage.
+- Weekly completion progress.
+
+The seven-day calendar must make it easy to identify which three days contain Ketoconazole, which day contains the weekly Derma Roller task, and which Minoxidil reminders occur every day.
+
+7. Weekly Report and Routine Editing
+
+Provide a weekly report that shows:
+
+- Minoxidil morning completion.
+- Minoxidil night completion.
+- Ketoconazole completion on its three scheduled days.
+- Derma Roller completion on its weekly scheduled day.
+- Missed, skipped, rescheduled, and safety-withheld tasks separately.
+
+Do not count unscheduled Ketoconazole days as missed tasks. Do not count a safety-withheld task as a missed dose or user failure.
+
+Allow the user to edit routine times and weekdays. However, preserve the requested default schedule on first setup unless the user changes it. Any schedule modification must update the dashboard, calendar, notifications, and reports consistently.
+
+8. Acceptance Criteria
+
+The implementation is complete only when all the following tests pass:
+
+1. The weekly planner displays all seven days.
+2. Minoxidil morning and night reminders are configured for every day, at 9:30 AM and 11:00 PM respectively.
+3. Ketoconazole is scheduled exactly three times per week, including Thursday in the default configuration.
+4. The Derma Roller task appears once per week, with Thursday as the intended default day.
+5. Thursday safety restrictions prevent inappropriate overlapping treatment reminders.
+6. The schedule resumes normally on subsequent days while respecting any required waiting period.
+7. Safety-withheld tasks are not counted as user failures.
+8. Offline tracking, app restarts, notifications, and weekly reports remain consistent.
+9. The original CR Growth QS features continue working without regressions.
+10. The app never represents this user-preferred routine as a medically validated prescription.
+
+Deliver the implementation as an integrated addition to the existing CR Growth QS project, preserving the original master prompt and all previously specified functionality.
